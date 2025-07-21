@@ -1,0 +1,138 @@
+.thumbnail {
+  width: 100%;
+  /*object-fit: contain; /*Remember this*/
+  /*object-position: top; /*Remember this*/
+  /*display: block; /*Remember this*/
+}
+.video-info-grid {
+  display: flex;
+  align-items: flex-start; /*vertical*/
+}
+.video-title {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.channel-picture {
+  display: flex;
+  vertical-align: top;
+  width: 50px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.profile-picture {
+  width: 36px;
+  border-radius: 50%;
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  column-gap: 15px;
+  row-gap: 40px;
+}
+
+@media (max-width: 750px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 751px) and (max-width: 999px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1000px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.video-time {
+  font-family: roboto, arial;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+}
+
+.channel-tooltip {
+  white-space: nowrap;
+  position: absolute;
+  bottom: -70px;
+  border-style: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 15px rgba(170, 170, 170, 0.647);
+  padding: 12px 15px;
+  opacity: 0;
+  z-index: 100;
+  background-color: white;
+}
+
+.channel-picture .channel-tooltip {
+  pointer-events: none;
+}
+
+.channel-picture:hover .channel-tooltip {
+  opacity: 1;
+}
+
+.icon-tooltip {
+  display: inline-block;
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+.info-tooltip {
+  display: inline-block;
+  vertical-align: middle;
+}
+.profile-picture-tooltip {
+  vertical-align: middle;
+  width: 36px;
+  border-radius: 50%;
+}
+
+.video-author-tooltip {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-bottom: 3px;
+}
+
+.subscribers {
+  font-size: 13px;
+
+  color: rgb(122, 122, 122);
+}
